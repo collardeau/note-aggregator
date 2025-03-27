@@ -63,7 +63,7 @@ A Node.js web application designed to aggregate Markdown notes (e.g., from Obsid
       # .env - Environment Variables for Note Aggregator
 
       # REQUIRED: Absolute path to the directory containing your source note folders (e.g., 'daily', 'work')
-      OBSIDIAN_VAULT_PATH="/Users/your_username/Dropbox/Your Obsidian Vault"
+      OBSIDIAN_VAULT_PATH="/Users/your_username/Your Obsidian Vault"
 
       # OPTIONAL: Set a custom port (defaults to 3000 if not set)
       # PORT=3001
