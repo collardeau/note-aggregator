@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Aggregator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Note Aggregator</h1>
+
+    <form id="aggregate-form">
+      <div class="form-group">
+        <label for="sourceDir">Source Journal:</label>
+        <select id="sourceDir" name="sourceDir" required>
+          <option value="" disabled selected>Loading sources...</option>
+          <!-- Options will be loaded by JS -->
+        </select>
+      </div>
+
+      <!-- Changed Tag Selection Section -->
+      <div class="form-group">
+        <label>Tags to Aggregate:</label>
+        <div class="control-group">
+          <label class="inline-label">
+            <input
+              type="checkbox"
+              id="includeAllTags"
+              name="includeAllTags"
+              checked
+            />
+            <!-- Default to checked -->
+            Include All Notes (Ignore Specific Tags)
+          </label>
+        </div>
+        <div id="tagsList" class="checkbox-group disabled">
+          <!-- Start disabled -->
+          <p>Select Source First / Uncheck "Include All"</p>
+          <!-- Tag Checkboxes will be loaded by JS -->
+        </div>
+      </div>
+      <!-- End Changed Section -->
+
+      <div class="form-group">
+        <label>Allowed Privacy Levels (Select none to allow all):</label>
+        <div id="privacyLevels" class="checkbox-group">
+          <p>Select Source First</p>
+          <!-- Checkboxes will be loaded by JS -->
+        </div>
+      </div>
+
+      <div class="form-group date-range">
+        <label for="startDate">Start Date (Optional):</label>
+        <input type="date" id="startDate" name="startDate" />
+
+        <label for="endDate">End Date (Optional):</label>
+        <input type="date" id="endDate" name="endDate" />
+      </div>
+
+      <button type="submit" id="aggregate-button">Aggregate Notes</button>
+    </form>
+
+    <div id="status"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
